@@ -1,11 +1,11 @@
 function SpaceCube()
 {
     this.x = width/2;
-    
+    this.speed = 20;
    
     this.show = function() {
         fill(255);
-      
+        strokeWeight(1);
         //body
         rect(this.x, height-60  , 20, 40 );
         //cockpit
@@ -21,7 +21,7 @@ function SpaceCube()
 
     }
     this.move = function(dir){
-        this.x += dir * 5;
+        this.x += dir * this.speed;
     }
 
 }
