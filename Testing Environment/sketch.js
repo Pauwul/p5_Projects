@@ -2,11 +2,11 @@
 
 var cube;
 var circles = [];
-// var ray;
+var rays = [];
 function setup() {
   createCanvas(600  , 400);
   cube = new SpaceCube();
-  // ray = new Rayy(300, 200);
+  
   for( var i = 0 ; i < 8   ; i++)
   {
     circles[i] = new CircleInvader( i*80+80, 60);
@@ -15,8 +15,7 @@ function setup() {
 
 function draw() {
   background(51);
-  // ray.show();
-  // ray.move();
+
   for( var i = 0 ; i < circles.length ; i++)
   {
     circles[i].show();
@@ -26,6 +25,13 @@ function draw() {
 
 function keyPressed()
 {
+  if( key == ' ')
+  {
+    var ray = new Rayy(ship.x, height - 20); 
+    rays.push(ray);
+    ray.show();
+    ray.move();
+  }
   if(keyCode == RIGHT_ARROW)
   {
     cube.move(1);
