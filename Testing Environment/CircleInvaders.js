@@ -88,9 +88,13 @@ function CircleInvader(x , y)
     this.move = function() {
         this.x = this.x + this.xdir;
         this.y = this.y + this.ydir;
-        if( this.x > width || this.x < 0)
+        if( this.x > width || this.x < 0){
             this.xdir = -this.xdir;
-        
+           
+        }
+        if(this.x == width || this.x == 0 ){
+            this.y = this.y + 40;
+        }
         
     }
 }
