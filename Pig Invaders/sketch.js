@@ -4,6 +4,8 @@ var cube;
 var circles = [];
 var rays = [];
 var permaray;
+var i = 0;
+var j = 0;
 function setup() {
   createCanvas(800, 500);
   cube = new SpaceCube();
@@ -15,6 +17,7 @@ function setup() {
   // if (rays[0].y < 600) {
   //   rays[0].y = 800;
   // }
+  // nevermind this still doesn't work
 
   for (var i = 0; i < 8; i++) {
     circles[i] = new CircleInvader(i * 80 + 80, 60);
@@ -26,7 +29,7 @@ function draw() {
 
   cube.show();
   //goes through every ray object to show and move it
-  for (var i = 0; i < rays.length; i++) {
+  for ( i = 0; i < rays.length; i++) {
 
 
     rays[i].show();
@@ -35,7 +38,7 @@ function draw() {
     //verify if there's anything to delete
 
     //goes through every circle to see if it's interesecting with a ray
-    for (var j = 0; j < circles.length; j++) {
+    for ( j = 0; j < circles.length; j++) {
 
       //checks if every ray i intersects with circle j
       if (rays[i].hits(circles[j])) {
@@ -43,8 +46,8 @@ function draw() {
         rays[i].desintegrate();
         circles[j].grow();
         if (rays[i].deletus ) {
-          let tempRay = rays;
-          tempRay.splice(i, 1);
+        
+          rays.splice(i, 1);
           tempRay.filter(element => {
             return element !== undefined;
           });
@@ -63,7 +66,7 @@ function draw() {
     }
   }
   //show the pigs
-  for (var i = 0; i < circles.length; i++) {
+  for (i = 0; i < circles.length; i++) {
     circles[i].show();
     circles[i].move();
   }
