@@ -6,8 +6,8 @@ function Rayy(x, y)
     this.speed = 3;
     //flag variable
     this.deletus = false;
-    if(this.y < 20)
-    this.deletus=true;
+    // if(this.y < 20)
+    // this.deletus=true;
     this.show = function()
     {
         fill(200,200,0);
@@ -22,9 +22,9 @@ function Rayy(x, y)
         let d = dist(this.x, this.y, circle.x, circle.y);
         if( d < (this.r + circle.r)){
             return true;
-        } 
+        } else{
             return false;
-        
+        }
     }
     this.desintegrate = function() {
         this.deletus = true;

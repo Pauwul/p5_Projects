@@ -45,17 +45,7 @@ function draw() {
 
         rays[i].desintegrate();
         circles[j].grow();
-        if (rays[i].deletus ) {
-        
-          rays.splice(i, 1);
-          tempRay.filter(element => {
-            return element !== undefined;
-          });
-          if (tempRay !== [ ] ) {
-            rays = tempRay;
-          }
-          console.log(tempRay);
-        }
+      
 
         console.log("FEEDING");
 
@@ -65,11 +55,24 @@ function draw() {
 
     }
   }
+  for( let i = rays.length - 1 ; i >= 0; i--){
+  if (rays[i].deletus ) {
+        
+    rays.splice(i, 1);
+
+  }
+  }
   //show the pigs
   for (i = 0; i < circles.length; i++) {
     circles[i].show();
     circles[i].move();
+    
   }
+  for( i = circles.length-1; i>=0; i--)
+  if( circles[i].r > 50)
+    {
+      circles.splice(i,1);
+    }
 
 
 
