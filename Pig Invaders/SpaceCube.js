@@ -16,12 +16,20 @@ function SpaceCube()
         //right wing
         triangle(this.x + 20, height-50, this.x + 40, height, this.x + 20, height -20   )
         //thrusters
-        var k = 0;
+        stroke('red');
+        strokeWeight(4);
+        point(this.x+random(0,10), height-10 + random(0,20), )
+        point(this.x+random(0,10), height-10 + random(0,20), )
+        point(this.x+random(0,10), height-12 + random(0,20), )
+        point(this.x+random(0,20), height-12 + random(0,20), )
+        stroke(255);
+        strokeWeight(1);
         
 
     }
     this.move = function(dir){
         this.x += dir * this.speed;
     }
+
 
 }
