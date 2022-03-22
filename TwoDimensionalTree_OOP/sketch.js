@@ -13,16 +13,24 @@ function setup() {
 
 }
 
-
-function mousePressed()
+function keyPressed()
 {
+    nextBranch();
   
 }
+
 function nextBranch(){
-  
-  tree[j]  = tree[0].branchRight();
-  tree[j+1]= tree[0].branchLeft();
+  push()
+  tree[j]  = tree[j-1].branchRight();
+  tree[j+1]= tree[j-1].branchLeft();
   j = j + 2;
+  pop()
+  push()
+  tree[j]  = tree[j-1].branchRight();
+  tree[j+1]= tree[j-1].branchLeft();
+  j = j + 2;
+  pop()
+
   console.log(j);
 }
 
