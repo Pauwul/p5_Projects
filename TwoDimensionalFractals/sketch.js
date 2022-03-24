@@ -5,7 +5,6 @@ let growth = 0;
 let col = 255;
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  slider = createSlider( 0, TWO_PI, PI/4, 0.01);
   growth = random(0.5, 0.7);
  
 }
