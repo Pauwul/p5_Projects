@@ -1,8 +1,15 @@
 # p5_Projects
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-#### This repository keeps track of all the projects I'll do while learning the ***p5.js framework***. You *** may*** want to  reffer to the chapters under if you're searching for something interesting. 
-* 
-## First project
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pig invaders
-Motivation: I played a lot of chicken invaders in my youth, this should be a nice trip back memory lane
+### Motivation: 
+
+* This repository keeps track of all the projects I'll do while learning the ***p5.js framework***. 
+
+## Project list
+
+1. ### ![ 🐷 Pig invaders](https://github.com/Pauwul/p5_Projects/tree/main/Pig%20Invaders) 
+
+* Motivation: I played a lot of chicken invaders in my youth, this should be a nice trip back memory lane
+
+2. ### ![ 🌲 Tree ]
+
+3. ### Pig invaders
